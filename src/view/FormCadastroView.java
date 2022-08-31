@@ -5,16 +5,10 @@
 package view;
 
 import controller.FormCadastroController;
-import java.sql.Connection;
-import dao.Conexao;
-import dao.UsuarioDAO;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
+
 import javax.swing.JTextField;
 
-import model.Usuario;
+
 
 /**
  *
@@ -30,6 +24,8 @@ public class FormCadastroView extends javax.swing.JFrame {
     public FormCadastroView() {
         initComponents();
         controller = new FormCadastroController(this);
+        TxtCadId.setEnabled(false);
+        TxtCadUsuario.setFocusable(true);
         
     }
 
@@ -50,7 +46,7 @@ public class FormCadastroView extends javax.swing.JFrame {
         TxtCadSenha = new javax.swing.JTextField();
         BtnSalvar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Usuarios");
         setLocation(new java.awt.Point(550, 250));
 
@@ -112,6 +108,9 @@ public class FormCadastroView extends javax.swing.JFrame {
 
     private void BtnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSalvarActionPerformed
       controller.salvaUsuario();
+      FormCadastroView telaDeCadastro = new FormCadastroView();
+      telaDeCadastro.setVisible(false);
+      
         
         
         

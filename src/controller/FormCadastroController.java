@@ -33,8 +33,10 @@ public class FormCadastroController {
             UsuarioDAO usuarioDao = new UsuarioDAO(conexao);
             usuarioDao.insert(usuario);
             JOptionPane.showMessageDialog(null, "Usuario salvo com sucesso!");
+            
         } catch (SQLException ex) {
             Logger.getLogger(FormCadastroView.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
     }
     
