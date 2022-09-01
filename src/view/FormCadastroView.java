@@ -108,8 +108,7 @@ public class FormCadastroView extends javax.swing.JFrame {
 
     private void BtnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSalvarActionPerformed
       controller.salvaUsuario();
-      FormCadastroView telaDeCadastro = new FormCadastroView();
-      telaDeCadastro.setVisible(false);
+      
       
         
         
